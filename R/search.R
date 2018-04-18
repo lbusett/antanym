@@ -96,6 +96,7 @@ an_filter <- function(gaz, query, feature_ids, extent, feature_type, origin_coun
     }
     if (!missing(query)) {
         assert_that(is.string(query),!is.na(query),nzchar(query))
+
         ## split query into words, and match against each
         sterms <- strsplit(query, "[ ,]+")[[1]]
         for (st in sterms) idx <- idx & (grepl(st, gaz$place_name, ignore.case = TRUE) | grepl(st, gaz$place_name_transliterated, ignore.case = TRUE))
