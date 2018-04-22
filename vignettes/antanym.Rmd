@@ -50,7 +50,7 @@ If you want to be able to work offline, you can cache the data to a directory th
 
 If you prefer working with `sp` objects, then this will return a `SpatialPointsDataFrame`:
 ```{r as_sp, eval = FALSE}
-gsp <- an_read(sp = TRUE, cache_dir = cache_dir)
+gsp <- an_read(sp = TRUE, cache_dir = tempdir())
 ```
 
 How many names do we have in total?

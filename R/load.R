@@ -84,7 +84,6 @@ an_read <- function(gazetteers = "all", sp = FALSE, cache_directory, refresh_cac
             }
         }
     } else {
-      browser()
         ## just provide the URL, and read_csv will fetch it
         local_file_name <- download_url
     }

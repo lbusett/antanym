@@ -105,6 +105,7 @@ an_thin <- function(gaz, n, score_col = "score", score_weighting = 5){
     } else {
         this.dist <- as.matrix(dist(gaz[, c("longitude", "latitude")]))
     }
+
     if (!is.null(score_col)) {
         if (inherits(gaz, "SpatialPointsDataFrame")) {
             sc <- as.data.frame(gaz)[, score_col]
